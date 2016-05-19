@@ -38,7 +38,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">This Is About Page</div>
+                <div class="title">{{$pageMsg}}</div>
             </div>
         </div>
     </body>

@@ -38,7 +38,24 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title">
+                    <?php if (empty($people)): ?>
+                        Nothing to show here
+                        
+                    <?php else: ?>
+                        Yay, THere is something
+                        
+                    <?php endif ?>
+                    
+                    <?php foreach ($people as $person): ?>
+
+                            <li>{{$person}}</li>
+                        
+                    <?php endforeach ?>
+                
+                
+                    
+                </div>
             </div>
         </div>
     </body>
