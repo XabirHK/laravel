@@ -1,5 +1,21 @@
-@extends('layout')
+@extends('layouts.master')
+
+
+       
+
 
 @section('content')
-    <h1>The welcome page goes here</h1>
+
+        @include('pages.partial.service')
+
+        @include('pages.partial.portfolio')
+
+        @include('pages.partial.about')
+
+        @include('pages.partial.team')
+
+        @include('pages.partial.clients')
+
+        @include('pages.partial.contact')
+
 @stop
