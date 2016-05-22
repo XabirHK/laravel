@@ -12,13 +12,14 @@
     <title>Learning Laravel Templeting</title>
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="{{URL::asset('assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{URL::asset("asset/css/bootstrap.min.css")}}">
 
     <!-- Custom CSS -->
-    <link  rel="stylesheet" href="{{URL::asset('assets/css/agency.css')}}">
+    <link  rel="stylesheet" href="{{URL::asset("asset/css/agency.css")}}">
 
     <!-- Custom Fonts -->
-    <link rel="stylesheet" href="{{URL::asset('assets/font-awesome/css/font-awesome.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{URL::asset("asset/font-awesome/css/font-awesome.min.css")}}" type="text/css">
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
