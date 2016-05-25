@@ -39,8 +39,47 @@
 	        
 	            
 	        </tbody>
-    	</table> 
+    	</table>
 
+    	
+
+    	<?php if (!$card->notes->isEmpty()): ?>
+
+	    	<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+		        <thead>
+		            <tr>
+		                <th>#</th>
+		                <th>Body</th>
+		                <th>Date</th>
+		            </tr>
+		        </thead>
+		        <tfoot>
+		            <tr>
+		                <th>#</th>
+		                <th>Body</th>
+		                <th>Date</th>
+		            </tr>
+		        </tfoot>
+		        <tbody>
+
+		        	<?php $cnt='1'; foreach ($card->notes as $note): ?>
+		        		<tr>
+			                <td>{{$cnt}}</td>
+			                <td>{{$note->body}}</td>
+			                <td>{{date_format($note->created_at,'d-M-Y')}}</td>
+		            	</tr>
+		        	<?php $cnt++; endforeach ?>
+
+		        </tbody>
+	    	</table>
+
+    	<?php endif ?>
+    	
+    		
+    	
+		
+
+    	
 
 	</div>
 	
