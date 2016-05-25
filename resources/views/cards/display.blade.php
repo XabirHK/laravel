@@ -27,14 +27,15 @@
 	        <tbody>
 
 	        <?php $cnt='1'; foreach ($cards as $card): ?>
-	        	 <tr>
+	        	<a href="#">
+	        	<tr>
 	                <td>{{$cnt}}</td>
-	                <td>{{$card->title}}</td>
+	                <td><a href='cards/{{$card->id}}'>{{$card->title}}</a></td>
 	                <td>{{$card->banktitle}}</td>
 	                <td>{{$card->discount}}</td>
 	                <td>{{date_format($card->created_at,'d-M-Y')}}</td>
-	                
 	            </tr>
+	            </a>
 	        	
 	        <?php $cnt++; endforeach ?>
 	            
