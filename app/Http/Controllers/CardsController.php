@@ -16,6 +16,6 @@ class CardsController extends Controller
     }
 
     public function showSingle(Card $card){
-    	return view('cards.showSingle', compact('cards'));
+    	return view('cards.showSingle', compact('card'));
     }
 }

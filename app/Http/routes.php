@@ -20,6 +20,7 @@
 Route::get('/','PagesController@home');
 Route::get('about','PagesController@about');
 Route::get('cards','CardsController@display');
+Route::get('cards/{card}','CardsController@showSingle');
 
 
 // Route::get('about', function () {

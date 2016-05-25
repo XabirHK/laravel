@@ -3,7 +3,7 @@
 
 @section('content')
 	<div class="container">
-		<h1>All Cards</h1>
+		<h1>Single Card</h1>
 		<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
 	        <thead>
 	            <tr>
@@ -26,9 +26,9 @@
 	        </tfoot>
 	        <tbody>
 
-	        <?php $cnt='1'; foreach ($cards as $card): ?>
+	        
 	        	 <tr>
-	                <td>{{$cnt}}</td>
+	                <td></td>
 	                <td>{{$card->title}}</td>
 	                <td>{{$card->banktitle}}</td>
 	                <td>{{$card->discount}}</td>
@@ -36,7 +36,7 @@
 	                
 	            </tr>
 	        	
-	        <?php $cnt++; endforeach ?>
+	        
 	            
 	        </tbody>
     	</table> 
@@ -47,16 +47,3 @@
       
 @stop
 
-@section('footer')
-    <script src="//code.jquery.com/jquery-1.12.3.min.js"></script>
-    
-	<script type="text/javascript">
-		$('document').ready(function() {
-	    	$('#example').DataTable();
-		} );
-	</script>
-
-	<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
-    
-@stop
