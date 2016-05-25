@@ -43,7 +43,7 @@
 
     	
 
-    	<?php if (!$card->notes->isEmpty()): ?>
+    	<?php if (!$card->notes->isEmpty()): ?> <!-- mean if the notes is not empty then show the table -->
 
 	    	<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
 		        <thead>
