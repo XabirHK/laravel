@@ -48,10 +48,15 @@
 @stop
 
 @section('footer')
+    <script src="//code.jquery.com/jquery-1.12.3.min.js"></script>
+    
 	<script type="text/javascript">
-		$(document).ready(function() {
-	    $('#example').DataTable();
-	} );
+		$('document').ready(function() {
+	    	$('#example').DataTable();
+		} );
 	</script>
-	
+
+	<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+    
 @stop

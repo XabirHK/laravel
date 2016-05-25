@@ -14,9 +14,13 @@ class CreateCardsTable extends Migration
     {
         Schema::create('cards', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('email');
             $table->string('title');
             $table->string('banktitle');
             $table->string('discount');
+            $table->text('disdetails');
+            $table->string('distype');
+            $table->tinyInteger('highlited');
             $table->timestamps();
         });
     }
