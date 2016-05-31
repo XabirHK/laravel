@@ -22,6 +22,8 @@ Route::get('about','PagesController@about');
 Route::get('cards','CardsController@display');
 Route::get('cards/{card}','CardsController@showSingle');
 
+Route::post('cards/{card}/notes', 'CardsController@addNote');
+
 
 // Route::get('about', function () {
 //     return view('pages.about');
