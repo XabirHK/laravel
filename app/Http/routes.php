@@ -17,15 +17,6 @@
 
 // });
 
-Route::get('/','PagesController@home');
-Route::get('about','PagesController@about');
-Route::get('cards','CardsController@display');
-Route::get('cards/{card}','CardsController@showSingle');
-
-Route::post('cards/{card}/notes', 'NotesController@addNote');
-
-Route::get('notes/{note}/edit', 'NotesController@edit');
-Route::patch('notes/{note}', 'NotesController@update');
 
 
 // Route::get('about', function () {
@@ -35,4 +26,17 @@ Route::patch('notes/{note}', 'NotesController@update');
 
 
 
+//for adding middleware in routs, Althou new laravel autometacally add them i think
+/*Route::group(['middleware'=>['web']], function(){
 
+});
+*/
+
+
+	Route::get('/','PagesController@home');
+	Route::get('about','PagesController@about');
+	Route::get('cards','CardsController@display');
+	Route::get('cards/{card}','CardsController@showSingle');
+	Route::post('cards/{card}/notes', 'NotesController@addNote');
+	Route::get('notes/{note}/edit', 'NotesController@edit');
+	Route::patch('notes/{note}', 'NotesController@update');

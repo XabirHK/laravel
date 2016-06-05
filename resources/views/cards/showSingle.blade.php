@@ -89,15 +89,23 @@
     	<input type="hidden" name="_token" value="{{ csrf_token() }}">
     
 	    <div class="form-group">
-	    	<textarea name="body" class="form-control" ></textarea>
-	    </div>
+	    	<textarea name="body" class="form-control" >{{old('body')}}</textarea>
+	    </div> <!-- here old body is for displaying typed msg after showing erroe or refresh -->
 	    <div class="form-group">
 	    	<button type="submit" class="btn btn-primary">Add Note</button>
 	    </div>
     	
     	
     </form>
-    
+	
+    <?php if(count($errors)) { ?>
+    <ul>
+    	<?php foreach ($errors->all() as $error){ ?>
+    	<li>{{ $error }}</li>
+    	<?php } ?>
+    </ul>
+    <?php } ?>
+
 	</div>
 	
       

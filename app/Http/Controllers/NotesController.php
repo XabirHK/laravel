@@ -14,7 +14,7 @@ class NotesController extends Controller
     public function addNote(Request $request, Card $card){
 
         $this->validate($request, [
-            'body' => 'required'
+            'body' => 'required|min:10'
             ]);
     	//$note = new Note($request->all());
     	//$note->body = $request->body;
