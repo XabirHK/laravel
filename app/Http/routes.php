@@ -32,3 +32,7 @@ Route::patch('notes/{note}', 'NotesController@update');
 //     return view('pages.about');
 // });
 
+
+
+
+

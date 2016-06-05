@@ -12,16 +12,25 @@ use App\Http\Requests;
 class NotesController extends Controller
 {
     public function addNote(Request $request, Card $card){
-    	$note = new Note;
-    	$note->body = $request->body;
+
+        $this->validate($request, [
+            'body' => 'required'
+            ]);
+    	//$note = new Note($request->all());
+    	//$note->body = $request->body;
     	//return $note;
     	//return $card;
 		//$card->notes()->save($note);
 
     	$card->notes()->create([
-    		'body'=> $request->body
+    		'body'=> $request->body,
+            'user_id'=>1
     		]);
-
+        
+        /*$card->addNote(
+                new Note($request->all())
+            );
+*/
     	//return redirect('/somelink'); or
 
     	return back();

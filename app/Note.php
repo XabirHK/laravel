@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Note extends Model
 {
-	protected $fillable = ['body'];
+	protected $fillable = ['body','user_id'];
 	
     public function card(){
 
@@ -15,7 +15,7 @@ class Note extends Model
 
     public function user()
 	{
-	return $this->belongsTo(User::class);
+		return $this->belongsTo(User::class);
 	}
 
 }

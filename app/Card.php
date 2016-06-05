@@ -11,7 +11,5 @@ class Card extends Model
     	return $this->hasMany(Note::class);
     }
 
-    
-
 
 }

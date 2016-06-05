@@ -89,7 +89,7 @@
     	<input type="hidden" name="_token" value="{{ csrf_token() }}">
     
 	    <div class="form-group">
-	    	<textarea name="body" class="form-control" required></textarea>
+	    	<textarea name="body" class="form-control" ></textarea>
 	    </div>
 	    <div class="form-group">
 	    	<button type="submit" class="btn btn-primary">Add Note</button>
@@ -97,7 +97,7 @@
     	
     	
     </form>
-
+    
 	</div>
 	
       
