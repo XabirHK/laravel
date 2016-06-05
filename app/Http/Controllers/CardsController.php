@@ -19,14 +19,18 @@ class CardsController extends Controller
 
     public function showSingle(Card $card){
 
-    	//$card= Card::with('notes')->get(); one way
+    	//$card= Card::with('notes')->get(); //one way
     	//$card= Card::with('notes.user')->find(1); 
 
-    	//$card->load('notes.user');
+    	$card->load('notes.user');
     	//return $card;
 
     	//return $card->notes[0]; //n+1 problem will occur here is the number of loop and the nuber of quary will hit
     	return view('cards.showSingle', compact('card'));
+
+        //return $card->notes[0]->user;
+
+        //return $card;
     }
 
 }

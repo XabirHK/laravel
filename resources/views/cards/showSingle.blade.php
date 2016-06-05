@@ -71,7 +71,7 @@
 			                <td>{{$cnt}}</td>
 			                <td>{{$note->body}}</td>
 			                <td>{{date_format($note->created_at,'d-M-Y')}}</td>
-			                <td><a href="#">{{$note->user_id}}</a></td>
+			                <td><a href="#">{{$note->user->name}}</a></td>
 			                <td><a href="/notes/{{$note->id}}/edit"><button class="btn btn-primary btn-xs">Edit</button></a></td>
 		            	</tr>
 		        	<?php $cnt++; endforeach ?>
